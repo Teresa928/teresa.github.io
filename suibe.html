@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海对外经贸大学教务处</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            color: #333;
+        }
+        .top-header{
+            background: #0f3fa8;
+            color: #fff;
+            padding: 15px 0;
+        }
+        .header-inner{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+        .logo-text h2{
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .logo-text p{
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        .search-box{
+            display: flex;
+        }
+        .search-box input{
+            height: 35px;
+            width: 200px;
+            padding: 0 10px;
+            border: none;
+            outline: none;
+        }
+        .search-box button{
+            height: 35px;
+            width: 40px;
+            background: #f5a623;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .nav{
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        .nav-inner{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .nav ul{
+            display: flex;
+            list-style: none;
+        }
+        .nav li{
+            padding: 15px 25px;
+        }
+        .nav a{
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav li:first-child a{
+            color: #0f3fa8;
+            font-weight: bold;
+        }
+        .banner{
+            width: 100%;
+            height: 400px;
+            background: url(banner.PNG) no-repeat center;
+            background-size: cover;
+            position: relative;
+        }
+        .banner-dot{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .dot{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0.6;
+        }
+        .dot.active{
+            background: #f5a623;
+            opacity: 1;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .news-channel{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .news{
+            width: 75%;
+        }
+        .news-title{
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .news-title a{
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+        }
+        .news-content{
+            display: flex;
+        }
+        .news-img{
+            width: 40%;
+        }
+        .news-img img{
+            width: 100%;
+            height: auto;
+        }
+        .news-list{
+            width: 60%;
+            padding-left: 20px;
+        }
+        .news-item{
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .news-tag{
+            width: 60px;
+            height: 60px;
+            background: #1458d6;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+        }
+        .news-text h4{
+            margin-bottom: 5px;
+        }
+        .news-text span{
+            font-size: 12px;
+            color: #999;
+        }
+        .channel{
+            width: 23%;
+        }
+        .channel-title{
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .channel-list a{
+            display: flex;
+            align-items: center;
+            padding: 12px 10px;
+            background: #f5f5f5;
+            margin-bottom: 8px;
+            text-decoration: none;
+            color: #333;
+            border-left: 3px solid #1458d6;
+        }
+        .channel-icon{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 30px;
+            color: #1458d6;
+            font-size: 20px;
+        }
+        .modules{
+            display: flex;
+            justify-content: space-between;
+        }
+        .module-item{
+            width: 32%;
+            height: 120px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .module1{
+            background: #f5a623;
+        }
+        .module2{
+            background: #27a9e3;
+        }
+        .module3{
+            background: #1458d6;
+        }
+        .module-icon{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="logo.png" alt="校徽">
+                <div class="logo-text">
+                    <h2>上海对外经贸大学 教务处</h2>
+                    <p>SHANGHAI UNIVERSITY OF INTERNATIONAL BUSINESS AND ECONOMICS | Office of Academic Affairs</p>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="请输入关键字">
+                <button>🔍</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="nav-inner">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">部门概况</a></li>
+                <li><a href="#">人才培养</a></li>
+                <li><a href="#">教学运行</a></li>
+                <li><a href="#">质量监控</a></li>
+                <li><a href="#">实践教学</a></li>
+                <li><a href="#">规章制度</a></li>
+                <li><a href="#">辅修专栏</a></li>
+                <li><a href="#">非学历教育</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-dot">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="news-channel">
+            <div class="news">
+                <div class="news-title">
+                    <span>教学新闻</span>
+                    <a href="#">更多>></a>
+                </div>
+                <div class="news-content">
+                    <div class="news-img">
+                        <img src="news.PNG" alt="教学新闻图片">
+                    </div>
+                    <div class="news-list">
+                        <div class="news-item">
+                            <div class="news-tag">教学<br>质量</div>
+                            <div class="news-text">
+                                <h4>学校召开学生教学质量联络员座谈会</h4>
+                                <span>2026-04-16</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-tag">教学<br>例会</div>
+                            <div class="news-text">
+                                <h4>教学例会情况通报（4月7日）</h4>
+                                <span>2026-04-10</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-tag">教学<br>例会</div>
+                            <div class="news-text">
+                                <h4>教学例会情况通报（3月26日）</h4>
+                                <span>2026-04-10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="channel">
+                <div class="channel-title">快速通道</div>
+                <div class="channel-list">
+                    <a href="#">
+                        <div class="channel-icon">📚</div>
+                        <span>选课中心</span>
+                    </a>
+                    <a href="#">
+                        <div class="channel-icon">📋</div>
+                        <span>教学管理</span>
+                    </a>
+                    <a href="#">
+                        <div class="channel-icon">📖</div>
+                        <span>思源学堂</span>
+                    </a>
+                    <a href="#">
+                        <div class="channel-icon">📥</div>
+                        <span>下载中心</span>
+                    </a>
+                    <a href="#">
+                        <div class="channel-icon">❓</div>
+                        <span>常见问题</span>
+                    </a>
+                    <a href="#">
+                        <div class="channel-icon">📅</div>
+                        <span>校历</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modules">
+            <div class="module-item module1">
+                <div class="module-icon">🏛️</div>
+                <span>一网通办</span>
+            </div>
+            <div class="module-item module2">
+                <div class="module-icon">📊</div>
+                <span>教育质量监控与评估中心</span>
+            </div>
+            <div class="module-item module3">
+                <div class="module-icon">👥</div>
+                <span>语言文字</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
