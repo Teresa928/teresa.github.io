@@ -6,33 +6,195 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>徐菲儿简历</title>
     <style>
-        h1,.center {
-            text-align: center;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background-color: #f5f7fa;
+            animation: pageFadeIn 1s ease;
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container {
+            max-width: 960px;
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1458d6;
+            margin: 20px 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+        .center {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .center img {
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(20, 88, 214, 0.3);
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+        .center img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(20, 88, 214, 0.5);
+        }
+
         a {
             text-decoration: none;
-            color: rgb(20, 88, 214);
+            color: #1458d6;
+            transition: all 0.3s ease;
+            font-weight: bold;
         }
+        a:hover {
+            color: #0a3a94;
+            text-decoration: underline;
+        }
+
         h3 {
-            background-color: rgb(20, 88, 214);
+            background: linear-gradient(90deg, #1458d6, #3a7bf5);
             color: white;
-            line-height: 40px;
-            padding-left: 10px;
+            line-height: 45px;
+            padding-left: 15px;
             margin-top: 40px;
-            border-radius: 5px;
-            box-shadow: 10px 10px 10px #000;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(20, 88, 214, 0.2);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
         }
-        .container{
-            width: 960px;
-            margin: 0 auto;
+        h3:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(20, 88, 214, 0.3);
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #e0e6f5;
+            margin: 20px 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        li {
+            transition: all 0.2s ease;
+        }
+        li:hover {
+            color: #1458d6;
+            padding-left: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e0e6f5;
+        }
+        tr:first-child {
+            background-color: #e0e6f5;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f7fa;
+        }
+        .back-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #1458d6;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .back-top:hover {
+            background-color: #0a3a94;
+            transform: scale(1.1);
+        }
+        .back-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .center img {
+                width: 150px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .center img {
+                width: 120px;
+            }
+
+            h3 {
+                line-height: 40px;
+                font-size: 18px;
+            }
+
+            table {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>徐菲儿</h1>
         <div class="center">
-            <img src="webwxgetmsgimg.jfif" alt="" width="200px">
+            <img src="webwxgetmsgimg.jfif" alt="徐菲儿照片" width="200px">
         </div>
 
         <h4><a href="form.html">去注册页面</a></h4>
@@ -54,7 +216,7 @@
         <hr>
 
         <h3>教育背景Education</h3>
-        <table style="width:100%" border=1 cellspacing=0>
+        <table>
             <tr>
                 <td>时间</td>
                 <td>学校</td>
@@ -74,5 +236,19 @@
             <li>发呆研究员，专注于提升发呆的舒适度</li>
         </ol>
     </div>
+
+
+    <div class="back-top" onclick="window.scrollTo(0,0)">↑</div>
+    <script>
+        const backTop = document.querySelector('.back-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backTop.classList.add('show');
+            } else {
+                backTop.classList.remove('show');
+            }
+        });
+    </script>
 </body>
+
 </html>
